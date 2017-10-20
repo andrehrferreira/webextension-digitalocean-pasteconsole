@@ -1,0 +1,22 @@
+{
+    "name": "Digital Ocean Paste in Console",
+    "description": "Extension to paste strings in Digital Ocean console",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "background": {"page": "background.html"},
+    "content_scripts": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["contentscript.js"],
+        "run_at": "document_end",
+        "all_frames": false
+    }],
+    "browser_action": {
+        "default_icon": {"19": "icon.png","38": "icon.png"},
+        "default_title": "Digital Ocean Paste in Console"
+    },    
+    "icons": {"16": "icon.png", "128": "icon.png"},
+    "permissions": [
+        "clipboardRead",
+        "contextMenus"
+    ]
+}
